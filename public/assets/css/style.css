@@ -1,0 +1,35 @@
+body {
+    background-image: url("../img/burger.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    color: yellow;
+}
+
+.create-form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.eat {
+    margin-top: 50px;
+    float: left;
+    color: floralwhite;
+    font-size: 24px;
+}
+
+.devoured {
+    margin-top: 50px;
+    float: right;
+    color: #dc3545;
+    font-size: 24px;
+}
+
+h2 {
+    font-family: 'Luckiest Guy', cursive;
+}
