@@ -14,4 +14,11 @@ router.get("/", (req, res) => {
   });
 });
 
+router.post("/api/burgers", (req, res) => {
+  burger.insertOne("burger_name", req.body.burger_name, (result) => {
+    console.log(req.body);
+    res.json({ result });
+  });
+});
+// Export routes for server.js to use.
 module.exports = router;
