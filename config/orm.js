@@ -36,7 +36,7 @@ let orm = {
   },
 
   deleteOne: function (table, condition, cb) {
-    let queryString = `DELETE ${table} WHERE ${condition};`;
+    let queryString = `DELETE FROM ${table} WHERE ${condition};`;
     connection.query(queryString, (err, resp) => {
       if (err) {
         throw err;
