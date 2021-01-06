@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 
 router.post("/api/burgers", (req, res) => {
   burger.insertOne("burger_name", req.body.burger_name, (result) => {
-    res.json({ result });
+    res.json({ id: result.insertId });
   });
 });
 
@@ -28,8 +28,16 @@ router.put("/api/burgers/:id", (req, res) => {
     }
     res.json({ result });
   });
+});
 
-  router.delete("", (req, res) => {});
+router.delete("/api/burgers/:id", (req, res) => {
+  let condition = `id = ${req.params.id}`;
+  burger.deleteOne(condition, (err, result) => {
+    if (err) {
+      console.log(err);
+    }
+    res.json({ result });
+  });
 });
 // Export routes for server.js to use.
 module.exports = router;
