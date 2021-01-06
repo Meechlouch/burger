@@ -18,7 +18,7 @@ $(function () {
     });
   });
 
-  $(".eat").on("click", function (event) {
+  $(".eat").on("click", function () {
     let id = $(this).data("id");
     let newDevoured = $(this).data("newDevoured");
 
@@ -29,6 +29,15 @@ $(function () {
     $.ajax(`/api/burgers/${id}`, {
       type: "PUT",
       data: newDevouredBurger,
+    }).then(() => {
+      location.reload();
+    });
+  });
+
+  $(".trash").on("click", function () {
+    let id = $(this).data("id");
+    $.ajax(`/api/burgers/${id}`, {
+      type: "DELETE",
     }).then(() => {
       location.reload();
     });
