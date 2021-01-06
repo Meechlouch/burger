@@ -16,9 +16,24 @@ router.get("/", (req, res) => {
 
 router.post("/api/burgers", (req, res) => {
   burger.insertOne("burger_name", req.body.burger_name, (result) => {
-    console.log(req.body);
     res.json({ result });
   });
 });
+
+router.put("/api/burgers/:id", (req, res) => {
+  let condition = `id = ${req.params.id}`;
+  burger.updateOne("devoured", 1, condition, (err, result) => {
+    if (err) {
+      console.log(err);
+    }
+    res.json({ result });
+  });
+
+  router.delete("", (req, res) => {});
+});
 // Export routes for server.js to use.
 module.exports = router;
+
+// router.delete("", () => {
+// if (result.)
+// })
