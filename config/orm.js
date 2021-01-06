@@ -17,7 +17,9 @@ let orm = {
     let queryString = `INSERT INTO ${table} (${cols}) VALUES ("${vals}");`;
     console.log(queryString);
     connection.query(queryString, (err, resp) => {
-      if (err) throw err;
+      if (err) {
+        throw err;
+      }
       cb(resp);
     });
   },
@@ -26,7 +28,9 @@ let orm = {
     let queryString = `UPDATE ${table} SET ${objColVals} = ${boolean} WHERE ${condition};`;
     console.log(queryString);
     connection.query(queryString, (err, resp) => {
-      if (err) throw err;
+      if (err) {
+        throw err;
+      }
       cb(resp);
     });
   },
@@ -34,7 +38,9 @@ let orm = {
   deleteOne: function (table, condition, cb) {
     let queryString = `DELETE ${table} WHERE ${condition};`;
     connection.query(queryString, (err, resp) => {
-      if (err) throw err;
+      if (err) {
+        throw err;
+      }
       cb(resp);
     });
   },
