@@ -15,8 +15,8 @@ let burger = {
     });
   },
   // Change the devoured status to true.
-  updateOne: function (objColVals, condition, cb) {
-    orm.updateOne("burgers", objColVals, condition, function (res) {
+  updateOne: function (objColVals, boolean, condition, cb) {
+    orm.updateOne("burgers", objColVals, boolean, condition, function (res) {
       cb(res);
     });
   },
