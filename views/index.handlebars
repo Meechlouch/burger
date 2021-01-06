@@ -3,44 +3,35 @@
 
     <form class="create-form">
         <div class="form-group">
-            <label for="burger">Burger Name:</label>
-            <input type="text" id="burger" name="name">
+            <label for="createburger" class="createBurger">Burger Name:</label>
+            <input type="text" id="createburger" name="burger">
             <button class="btn-danger" type="submit"><i class="fas fa-hamburger"></i></button>
         </div>
     </form>
+    <br>
+    <div class="row">
+        <div class="notdevoured col-md-6">
+            <h2>Burgers ready to be devoured!</h2>
+
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/not-devoured-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
 
 
-    <div class="eat">
-        <h2>Burgers ready to be devoured!</h2>
-
-        <ul>
-            {{#each burgers}}
-            {{#unless devoured}}
-            <li>
-                {{this.id}}-{{this.burger_name}}
-                <button type="button" class="btn-warning">
-                    <i class="fas fa-utensils"></i>
-                </button>
-            </li>
-            {{/unless}}
-            {{/each}}
-        </ul>
-    </div>
-
-    <div class="devoured">
-        <h2>Burgers thats been devoured!</h2>
-
-        <ul>
-            {{#each burgers}}
-            {{#if devoured}}
-            <li>
-                {{this.id}}-{{this.burger_name}}
-                <button type="button" class="btn-danger">
-                    <i class="fas fa-sign-language"></i>
-                </button>
-            </li>
-            {{/if}}
-            {{/each}}
-        </ul>
+        <div class="devoured col-md-6">
+            <h2>Burgers thats been devoured!</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/devoured-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </div>
