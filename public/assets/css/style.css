@@ -1,7 +1,7 @@
 body {
     background-image: url("../img/burger.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center
 }
 
@@ -20,6 +20,10 @@ h1 {
 .create-form {
     text-align: center;
     margin-top: 50px;
+}
+
+.makeBurger {
+    font-size: 18px;
 }
 
 .fa-utensils {
