@@ -52,14 +52,14 @@ with express.
 
 ## Technologies:
 
-  <img src="public\assets\img\html5.png" alt="html logo" width="30">
-  <img src="public\assets\img\cssLogo.png" alt="css logo"width="30">
-  <img src="public\assets\img\javascriptLogo.png" alt="js logo"width="30">
-  <img src="public\assets\img\nodejsLogo.png" alt="html logo"width="30">
-  <img src="public\assets\img\JQuery.png" alt="html logo"width="30">
-  <img src="public\assets\img\bootstrapLogo.png" alt="html logo"width="30">
-  <img src="public\assets\img\heroku-logotype-vertical-purple.png" alt="logo" width="30">
-  <img src="public\assets\img\express.png" alt="html logo"width="30">
+  <img src="public\assets\img\html5.png" alt="html logo" width="30" style="display: inline-block;">
+  <img src="public\assets\img\cssLogo.png" alt="css logo"width="30" style="display: inline-block;">
+  <img src="public\assets\img\javascriptLogo.png" alt="js logo"width="30" style="display: inline-block;">
+  <img src="public\assets\img\nodejsLogo.png" alt="html logo"width="30" style="display: inline-block;">
+  <img src="public\assets\img\JQuery.png" alt="html logo"width="30" style="display: inline-block;">
+  <img src="public\assets\img\bootstrapLogo.png" alt="html logo"width="30" style="display: inline-block;">
+  <img src="public\assets\img\heroku-logotype-vertical-purple.png" alt="logo" width="30" style="display: inline-block;">
+  <img src="public\assets\img\express.png" alt="html logo"width="30" style="display: inline-block;">
 
 ## :copyright:License:
 
