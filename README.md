@@ -28,7 +28,7 @@ with express.
 
 ## :camera: Visuals:
 
-  <img src="public\assets\img\burgers.gif" width="300">
+  <img src="public\assets\img\burgers.gif" width="600">
 
 ## Installation:
 
